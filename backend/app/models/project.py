@@ -5,7 +5,7 @@ from enum import Enum
 from sqlalchemy import Date, DateTime, Enum as SqlEnum, Integer, Numeric, String, func
 from sqlalchemy.orm import Mapped, mapped_column
 
-from backend.app.db.database import Base
+from app.db.database import Base
 
 
 class ProjectStatus(str, Enum):

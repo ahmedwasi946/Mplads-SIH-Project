@@ -6,9 +6,9 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 from pwdlib import PasswordHash
 
-from backend.app.core.config import settings
-from backend.app.models.user import User, UserRole
-from backend.app.schemas.auth import ManagedUserCreate, RegisterRequest
+from app.core.config import settings
+from app.models.user import User, UserRole
+from app.schemas.auth import ManagedUserCreate, RegisterRequest
 
 
 password_hash = PasswordHash.recommended()

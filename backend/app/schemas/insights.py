@@ -4,7 +4,7 @@ from typing import Any
 
 from pydantic import BaseModel, Field
 
-from backend.app.models.risk_assessment import RiskAssessmentLevel
+from app.models.risk_assessment import RiskAssessmentLevel
 
 
 class InsightCategory(str, Enum):

@@ -3,8 +3,8 @@ from enum import Enum
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from backend.app.models.risk_assessment import RiskAssessmentLevel
-from backend.app.schemas.risk import RiskFactor
+from app.models.risk_assessment import RiskAssessmentLevel
+from app.schemas.risk import RiskFactor
 
 
 class AlertPriority(str, Enum):

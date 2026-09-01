@@ -3,7 +3,7 @@ from collections.abc import Generator
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
 
-from backend.app.core.config import settings
+from app.core.config import settings
 
 
 def _sqlalchemy_database_url(database_url: str) -> str:

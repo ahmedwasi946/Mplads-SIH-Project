@@ -1,16 +1,16 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from backend.app.api.dependencies import get_current_user, require_roles
-from backend.app.db.database import get_db
-from backend.app.models.dataset import Dataset
-from backend.app.models.user import User, UserRole
-from backend.app.schemas.preprocessing import (
+from app.api.dependencies import get_current_user, require_roles
+from app.db.database import get_db
+from app.models.dataset import Dataset
+from app.models.user import User, UserRole
+from app.schemas.preprocessing import (
     FeaturesResponse,
     PreprocessingSummary,
     QualityReportResponse,
 )
-from backend.app.services.preprocessing_service import (
+from app.services.preprocessing_service import (
     get_quality_report,
     preprocess_dataset,
 )

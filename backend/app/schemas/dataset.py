@@ -2,7 +2,7 @@ from datetime import datetime
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from backend.app.models.dataset import DatasetUploadStatus
+from app.models.dataset import DatasetUploadStatus
 
 
 class DatasetResponse(BaseModel):

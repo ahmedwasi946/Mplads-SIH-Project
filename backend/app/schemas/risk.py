@@ -3,7 +3,7 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from backend.app.models.risk_assessment import RiskAssessmentLevel
+from app.models.risk_assessment import RiskAssessmentLevel
 
 
 class RiskFactor(BaseModel):

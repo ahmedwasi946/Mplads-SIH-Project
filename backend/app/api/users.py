@@ -2,11 +2,11 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from backend.app.api.dependencies import require_roles
-from backend.app.db.database import get_db
-from backend.app.models.user import User, UserRole
-from backend.app.schemas.auth import ManagedUserCreate, UserResponse, UserRoleUpdate
-from backend.app.services.auth_service import create_managed_user, update_user_role
+from app.api.dependencies import require_roles
+from app.db.database import get_db
+from app.models.user import User, UserRole
+from app.schemas.auth import ManagedUserCreate, UserResponse, UserRoleUpdate
+from app.services.auth_service import create_managed_user, update_user_role
 
 
 router = APIRouter(

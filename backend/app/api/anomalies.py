@@ -2,22 +2,22 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from backend.app.api.dependencies import get_current_user, require_roles
-from backend.app.db.database import get_db
-from backend.app.models.anomaly_detection import (
+from app.api.dependencies import get_current_user, require_roles
+from app.db.database import get_db
+from app.models.anomaly_detection import (
     AnomalyDetectionResult,
     AnomalyRiskLevel,
 )
-from backend.app.models.dataset import Dataset
-from backend.app.models.user import User, UserRole
-from backend.app.schemas.anomaly import (
+from app.models.dataset import Dataset
+from app.models.user import User, UserRole
+from app.schemas.anomaly import (
     AnomalyListResponse,
     AnomalyResultResponse,
     AnomalySummaryResponse,
     DetectionRequest,
     DetectionSummaryResponse,
 )
-from backend.app.services.anomaly_service import (
+from app.services.anomaly_service import (
     build_anomaly_summary,
     detect_and_store_anomalies,
     list_anomalies,

@@ -16,7 +16,7 @@ from sqlalchemy import (
 )
 from sqlalchemy.orm import Mapped, mapped_column
 
-from backend.app.db.database import Base
+from app.db.database import Base
 
 
 class AnomalyRiskLevel(str, Enum):

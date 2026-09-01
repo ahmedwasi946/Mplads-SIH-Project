@@ -3,7 +3,7 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from backend.app.models.anomaly_detection import AnomalyRiskLevel
+from app.models.anomaly_detection import AnomalyRiskLevel
 
 
 class ContributingFeature(BaseModel):

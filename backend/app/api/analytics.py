@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from backend.app.db.database import get_db
-from backend.app.api.dependencies import get_current_user
-from backend.app.schemas.analytics import DashboardAnalyticsResponse
-from backend.app.services.analytics_service import get_dashboard_analytics
+from app.db.database import get_db
+from app.api.dependencies import get_current_user
+from app.schemas.analytics import DashboardAnalyticsResponse
+from app.services.analytics_service import get_dashboard_analytics
 
 
 router = APIRouter(

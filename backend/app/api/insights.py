@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 
-from backend.app.db.database import get_db
-from backend.app.api.dependencies import get_current_user
-from backend.app.schemas.insights import (
+from app.db.database import get_db
+from app.api.dependencies import get_current_user
+from app.schemas.insights import (
     InsightCategory,
     InsightPriority,
     ProjectInsightsResponse,
@@ -11,7 +11,7 @@ from backend.app.schemas.insights import (
     SmartInsightResponse,
     SmartInsightSummaryResponse,
 )
-from backend.app.services.insight_service import (
+from app.services.insight_service import (
     build_insight_summary,
     get_project_insights,
     list_insights,

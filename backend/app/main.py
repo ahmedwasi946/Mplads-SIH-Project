@@ -1,23 +1,23 @@
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+from app.db.database import Base, engine
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.api.alerts import router as alerts_router
-from backend.app.api.analytics import router as analytics_router
-from backend.app.api.anomalies import router as anomalies_router
-from backend.app.api.auth import router as auth_router
-from backend.app.api.datasets import router as datasets_router
-from backend.app.api.insights import router as insights_router
-from backend.app.api.preprocessing import router as preprocessing_router
-from backend.app.api.projects import router as projects_router
-from backend.app.api.reports import router as reports_router
-from backend.app.api.risk import router as risk_router
-from backend.app.api.routes import router
-from backend.app.api.users import router as users_router
-from backend.app.core.config import settings
-from backend.app.db.database import Base, engine
-from backend.app.models import (  # noqa: F401
+from app.api.alerts import router as alerts_router
+from app.api.analytics import router as analytics_router
+from app.api.anomalies import router as anomalies_router
+from app.api.auth import router as auth_router
+from app.api.datasets import router as datasets_router
+from app.api.insights import router as insights_router
+from app.api.preprocessing import router as preprocessing_router
+from app.api.projects import router as projects_router
+from app.api.reports import router as reports_router
+from app.api.risk import router as risk_router
+from app.api.routes import router
+from app.api.users import router as users_router
+from app.core.config import settings
+from app.models import (
     AnomalyDetectionResult,
     Dataset,
     DatasetProcessingResult,
@@ -26,12 +26,10 @@ from backend.app.models import (  # noqa: F401
     User,
 )
 
-
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     Base.metadata.create_all(bind=engine)
     yield
-
 
 app = FastAPI(
     title="MPLADS Sentinel AI API",

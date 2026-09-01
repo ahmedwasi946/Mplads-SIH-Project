@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from uuid import uuid4
 
-from backend.app.core.config import settings
+from app.core.config import settings
 
 
 @dataclass(frozen=True)

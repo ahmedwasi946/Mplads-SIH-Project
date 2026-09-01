@@ -5,15 +5,15 @@ from decimal import Decimal, ROUND_HALF_UP
 from sqlalchemy import case, func, select
 from sqlalchemy.orm import Session
 
-from backend.app.models.anomaly_detection import (
+from app.models.anomaly_detection import (
     AnomalyDetectionResult,
     AnomalyRiskLevel,
 )
-from backend.app.models.dataset import Dataset
-from backend.app.models.project import Project, ProjectStatus
-from backend.app.models.risk_assessment import RiskAssessment, RiskAssessmentLevel
-from backend.app.schemas.alerts import AlertPriority
-from backend.app.schemas.reports import (
+from app.models.dataset import Dataset
+from app.models.project import Project, ProjectStatus
+from app.models.risk_assessment import RiskAssessment, RiskAssessmentLevel
+from app.schemas.alerts import AlertPriority
+from app.schemas.reports import (
     AlertOverview,
     AnomalyOverview,
     ExecutiveOverview,
@@ -25,7 +25,7 @@ from backend.app.schemas.reports import (
     ReportSummaryResponse,
     RiskOverview,
 )
-from backend.app.services.alert_service import (
+from app.services.alert_service import (
     build_alert_summary,
     list_alerts,
 )

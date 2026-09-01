@@ -3,8 +3,8 @@ from decimal import Decimal, ROUND_HALF_UP
 from sqlalchemy import case, desc, func, select
 from sqlalchemy.orm import Session
 
-from backend.app.models.project import Project, ProjectStatus
-from backend.app.schemas.analytics import (
+from app.models.project import Project, ProjectStatus
+from app.schemas.analytics import (
     DashboardAnalyticsResponse,
     DelayedProjectsSummary,
     FinancialMetrics,

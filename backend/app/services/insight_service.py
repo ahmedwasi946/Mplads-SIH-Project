@@ -6,15 +6,15 @@ from typing import Any
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from backend.app.models.anomaly_detection import (
+from app.models.anomaly_detection import (
     AnomalyDetectionResult,
     AnomalyRiskLevel,
 )
-from backend.app.models.dataset import Dataset, DatasetUploadStatus
-from backend.app.models.project import Project, ProjectStatus
-from backend.app.models.risk_assessment import RiskAssessment, RiskAssessmentLevel
-from backend.app.schemas.alerts import AlertPriority
-from backend.app.schemas.insights import (
+from app.models.dataset import Dataset, DatasetUploadStatus
+from app.models.project import Project, ProjectStatus
+from app.models.risk_assessment import RiskAssessment, RiskAssessmentLevel
+from app.schemas.alerts import AlertPriority
+from app.schemas.insights import (
     InsightActionSummary,
     InsightCategory,
     InsightFactorSummary,
@@ -25,7 +25,7 @@ from backend.app.schemas.insights import (
     SmartInsightResponse,
     SmartInsightSummaryResponse,
 )
-from backend.app.services.alert_service import list_alerts
+from app.services.alert_service import list_alerts
 
 
 _RISK_TO_PRIORITY = {

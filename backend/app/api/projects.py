@@ -3,11 +3,11 @@ from sqlalchemy import desc, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from backend.app.db.database import get_db
-from backend.app.models.project import Project
-from backend.app.models.user import User, UserRole
-from backend.app.api.dependencies import get_current_user, require_roles
-from backend.app.schemas.project import (
+from app.db.database import get_db
+from app.models.project import Project
+from app.models.user import User, UserRole
+from app.api.dependencies import get_current_user, require_roles
+from app.schemas.project import (
     ProjectCreate,
     ProjectResponse,
     ProjectUpdate,

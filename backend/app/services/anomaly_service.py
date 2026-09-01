@@ -7,14 +7,14 @@ import pandas as pd
 from sqlalchemy import delete, func, select
 from sqlalchemy.orm import Session
 
-from backend.app.core.config import settings
-from backend.app.models.anomaly_detection import (
+from app.core.config import settings
+from app.models.anomaly_detection import (
     AnomalyDetectionResult,
     AnomalyRiskLevel,
 )
-from backend.app.models.dataset import Dataset
-from backend.app.models.dataset_processing import DatasetProcessingResult
-from backend.app.schemas.anomaly import (
+from app.models.dataset import Dataset
+from app.models.dataset_processing import DatasetProcessingResult
+from app.schemas.anomaly import (
     AnomalySummaryResponse,
     DetectionSummaryResponse,
     ModelConfiguration,

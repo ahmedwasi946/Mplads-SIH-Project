@@ -4,10 +4,10 @@ from enum import Enum
 
 from pydantic import BaseModel, Field
 
-from backend.app.models.anomaly_detection import AnomalyRiskLevel
-from backend.app.models.project import ProjectStatus
-from backend.app.models.risk_assessment import RiskAssessmentLevel
-from backend.app.schemas.alerts import AlertPriority, RiskAlertResponse
+from app.models.anomaly_detection import AnomalyRiskLevel
+from app.models.project import ProjectStatus
+from app.models.risk_assessment import RiskAssessmentLevel
+from app.schemas.alerts import AlertPriority, RiskAlertResponse
 
 
 class ReportAlertStatus(str, Enum):

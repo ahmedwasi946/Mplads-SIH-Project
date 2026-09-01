@@ -9,12 +9,12 @@ import pandas as pd
 from sqlalchemy import delete, func, select
 from sqlalchemy.orm import Session
 
-from backend.app.core.config import settings
-from backend.app.models.anomaly_detection import AnomalyDetectionResult
-from backend.app.models.dataset import Dataset
-from backend.app.models.dataset_processing import DatasetProcessingResult
-from backend.app.models.risk_assessment import RiskAssessment, RiskAssessmentLevel
-from backend.app.schemas.risk import RiskSummaryResponse, TopRiskFactor
+from app.core.config import settings
+from app.models.anomaly_detection import AnomalyDetectionResult
+from app.models.dataset import Dataset
+from app.models.dataset_processing import DatasetProcessingResult
+from app.models.risk_assessment import RiskAssessment, RiskAssessmentLevel
+from app.schemas.risk import RiskSummaryResponse, TopRiskFactor
 from ml.preprocessing.data_preprocessor import identify_columns
 
 

@@ -6,9 +6,9 @@ import pandas as pd
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from backend.app.core.config import settings
-from backend.app.models.dataset import Dataset
-from backend.app.models.dataset_processing import (
+from app.core.config import settings
+from app.models.dataset import Dataset
+from app.models.dataset_processing import (
     DatasetProcessingResult,
     DatasetProcessingStatus,
 )

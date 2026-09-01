@@ -1,17 +1,17 @@
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 
-from backend.app.api.dependencies import get_current_user, require_roles
-from backend.app.db.database import get_db
-from backend.app.models.dataset import Dataset
-from backend.app.models.risk_assessment import RiskAssessmentLevel
-from backend.app.models.user import User, UserRole
-from backend.app.schemas.risk import (
+from app.api.dependencies import get_current_user, require_roles
+from app.db.database import get_db
+from app.models.dataset import Dataset
+from app.models.risk_assessment import RiskAssessmentLevel
+from app.models.user import User, UserRole
+from app.schemas.risk import (
     RiskAssessmentListResponse,
     RiskAssessmentResponse,
     RiskSummaryResponse,
 )
-from backend.app.services.risk_scoring_service import (
+from app.services.risk_scoring_service import (
     build_risk_summary,
     calculate_and_store_risk,
     list_risk_assessments,

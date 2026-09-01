@@ -1,8 +1,8 @@
 from sqlalchemy import case, func, select
 from sqlalchemy.orm import Session
 
-from backend.app.models.risk_assessment import RiskAssessment, RiskAssessmentLevel
-from backend.app.schemas.alerts import (
+from app.models.risk_assessment import RiskAssessment, RiskAssessmentLevel
+from app.schemas.alerts import (
     AlertPriority,
     RiskAlertResponse,
     RiskAlertSummaryResponse,

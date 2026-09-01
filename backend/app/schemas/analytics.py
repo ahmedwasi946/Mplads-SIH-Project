@@ -3,7 +3,7 @@ from decimal import Decimal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from backend.app.models.project import ProjectStatus
+from app.models.project import ProjectStatus
 
 
 class ProjectMetrics(BaseModel):
